@@ -1,47 +1,26 @@
-# assignment-2
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using ConsoleApp12;
+using NUnit.Framework;
 
-              public static string Analyze(int a, int b, int c)
+namespace ClassLibrary1
+
+{
+    [TestFixture]
+    class assignment
+    {
+      //  public TriangleSolver t = new TriangleSolver();
+
+        [Test]
+        public void Analyze_input10_input10_input10_ExpectedGivenDimensionsformaEquilateralTriangle()
         {
-           
-            string values = string.Empty;
-            string reply = string.Empty;
-            string Sides = string.Empty;
+            //Arrange
+            int a = 10;
+            int b = 10;
+            int c = 10;
+            string expected = "Given Dimensions form a Equilateral Triangle";
+            TriangleSolver.Analyze(a, b, c);
 
-           
-            
-           if (((a + b > c) && (a + c > b) &&(b + c > a))
-                && a>0 && b>0 && c>0)
-            {
+            //Act
 
-                Console.WriteLine("given dimensions form a triangle");
-
-                if (a == b && b == c) 
-                {
-                    Console.WriteLine(" Equilatoral Triangle");
-                   
-                }
-                else if (a == b || b == c || a == c)
-                {
-                    Console.WriteLine("These sides form an isosceles Triangle");
-                }
-                else
-                {
-
-                    Console.WriteLine("These sides form a  scalene Triangle");
-                }
-
-            }
-            else
-            {
-                Console.WriteLine("do not form a triangle");
-            }
-            
-
-
-
-            return values;
-        }
-
-    }
-
-}
